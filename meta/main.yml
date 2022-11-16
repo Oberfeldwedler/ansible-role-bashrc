@@ -1,0 +1,8 @@
+galaxy_info:
+  role_name: bashrc
+  author: oberfeldwedler
+  description:  Places bash configuration files
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.1
+  galaxy_tags:
+    - bashrc
