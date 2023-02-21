@@ -6,7 +6,7 @@
     dest: /etc/bash.bashrc
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
 
 - name: Write skeleton .bashrc
   ansible.builtin.copy:
@@ -14,7 +14,7 @@
     dest: /etc/skel/.bashrc
     owner: root
     group: root
-    mode: 0644"
+    mode: '0644'
 
 - name: Determine ssh user homedir
   ansible.builtin.command: "getent passwd {{ item }} | cut -d: -f6"
@@ -27,7 +27,7 @@
     src: .bashrc
     dest: "{{ item.stdout }}/.bashrc owner={{ item.item }}"
     group: "{{ item.item }}"
-    mode: 0644
+    mode: '0644'
     with_items: "{{ bashrc_homedirs.results }}"
 
 - name: Write root .bashrc
@@ -36,4 +36,4 @@
     dest: /root/.bashrc
     owner: root
     group: root
-    mode: 0644"
+    mode: '0644'
