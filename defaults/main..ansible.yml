@@ -1,4 +1,0 @@
----
-
-bashrc_users:
-  - "{{ ansible_user_id }}"
